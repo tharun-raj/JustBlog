@@ -3,18 +3,18 @@
 
 Usage
 
-Installation:
+# Installation:
 1. Clone or download the repository.
 2. Open a terminal or command prompt and navigate to the directory where you have cloned/downloaded JustBlog.
 
-Run the Program:
+# Run the Program:
 1. Run the following command:
    * npm install
    * npx json-server --watch src/data/db.json --port 8000
    * npm start
 
-Exiting the Program:
-Press Ctrl + C in the terminal to exit the program.
+# Exiting the Program:
+1. Press Ctrl + C in the terminal to exit the program.
 
 # Contribuing:
 Contributions to JustBlog are welcome! If you'd like to contribute, please follow these steps:
