@@ -13,23 +13,23 @@ const useFetch = (url) => {
                 if(!res.ok){
                     throw("Couldn't fetch the data")
                 }
-                setError(null)
                 return res.json()
             })
             .then(data => {
                 setData(data)
                 setisPending(false)
+                setError(null) 
             })
-        .catch(err => {
-            if(err.name === "AbortError"){
-                console.log("aborted fetch")
-            }
-            else{
-                setError(err) 
-                setisPending(false)
-            }
-            
-        })
+            .catch(err => {
+                if(err.name === "AbortError"){
+                    console.log("aborted fetch")
+                }
+                else{
+                    setError(err.message) 
+                    setisPending(false)
+                }
+                
+            })
         }, 0)
         return () => {
             abortcont.abort()
